@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
       <div className="ui container" style={{ marginTop: "10px" }}>
         <SearchBar onSearchSubmit={this.onSearchSubmit} />
-        <h1>Number of cities:   {this.state.noOfCities}</h1>
+        <h1>Number of cities: {this.state.noOfCities>0?this.state.noOfCities : 'No cities found!'}</h1>
       </div>
     );
   }
