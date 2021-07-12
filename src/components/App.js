@@ -1,6 +1,6 @@
 import React from "react";
 import weatherapi from "../api/weatherAPI";
-import testJSON from '../api/test.json';
+import testJSON from "../api/test.json";
 import SearchBar from "./SearchBar";
 
 class App extends React.Component {
@@ -12,8 +12,7 @@ class App extends React.Component {
     //     bbox: "12,32,15,37,10",
     //     appid: "b6907d289e10d714a6e88b30761fae22",
     //   },
-    // });   //API NOT WORKING DUE TO CORS ISSUE 
-
+    // });   //API NOT WORKING DUE TO CORS ISSUE
 
     //below is the usage of test data
 
@@ -35,7 +34,12 @@ class App extends React.Component {
     return (
       <div className="ui container" style={{ marginTop: "10px" }}>
         <SearchBar onSearchSubmit={this.onSearchSubmit} />
-        <h1>Number of cities: {this.state.noOfCities>0?this.state.noOfCities : 'No cities found!'}</h1>
+        <h1>
+          Number of cities:
+          {this.state.noOfCities > 0
+            ? this.state.noOfCities
+            : "No cities found!"}
+        </h1>
       </div>
     );
   }
